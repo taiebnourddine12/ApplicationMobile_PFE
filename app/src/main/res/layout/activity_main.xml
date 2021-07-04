@@ -1,0 +1,1695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-2dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@xml/spinner_bg"
+                android:dropDownWidth="250dp"
+                android:popupElevation="3dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-2dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/poste"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@xml/spinner_bg"
+                    android:dropDownWidth="250dp"
+                    android:gravity="center"
+                    android:popupElevation="3dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@xml/input"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:hint="Date"
+                    android:inputType="text" />
+
+                <ImageView
+                    android:id="@+id/img_date"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="RAZ_date"
+                    android:src="@drawable/delete" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/matricule"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@xml/input"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:hint="Matricule"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <ImageView
+                    android:id="@+id/img_matricule"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="RAZ_matricule"
+                    android:src="@drawable/delete" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/of"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@xml/input"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:hint="OF"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10" />
+
+                <ImageView
+                    android:id="@+id/img_of"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="RAZ_of"
+                    android:src="@drawable/delete" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/prf"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@xml/input"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:hint="PRF"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="11" />
+
+                <ImageView
+                    android:id="@+id/img_prf"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="RAZ_prf"
+                    android:src="@drawable/delete" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/dash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimary"
+                    android:checked="true"
+                    android:onClick="dash"
+                    android:text="Dashboard"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/prod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimary"
+                    android:onClick="prod"
+                    android:text="Production"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@xml/button"
+                android:onClick="Ok"
+                android:text="OK"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/table"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:collapseColumns="50"
+                        android:visibility="gone">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="ID"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Date"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="OF"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="PRF"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="4"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Matricule"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Poste"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="6"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="7"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="8"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="9"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="10"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="11"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="12"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="13"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="14"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="15"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="16"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="17"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="18"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="19"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="20"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="21"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="22"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="23"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="24"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="25"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="26"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="27"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="28"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="29"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="30"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="32"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="34"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="35"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="36"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="37"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="38"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="39"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="40"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="41"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="42"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="43"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="44"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="45"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="46"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Taux de Defaux Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="47"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Cadence Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="48"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Cadence Théorique"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="49"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Actual H"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+
+                        </TableRow>
+
+
+                        <ListView
+                            android:id="@+id/myList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center" />
+
+
+                    </TableLayout>
+
+                    <!-- Table Prod -->
+
+                    <TableLayout
+                        android:id="@+id/tableprod"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:collapseColumns="47"
+                        android:visibility="gone">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="ID"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Date"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Poste"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="4"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="5"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="6"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="7"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H1 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="8"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView17"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="9"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView18"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="10"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView19"
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="11"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView20"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="12"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H2 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="13"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView25"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="14"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="15"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView27"
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="16"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView28"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="17"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H3 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView29"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="18"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView30"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="19"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView31"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="20"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="21"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView33"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="22"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H4 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView34"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="23"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView35"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="24"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView36"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="25"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView37"
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="26"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView38"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="27"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H5 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView39"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="28"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView40"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="29"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView41"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="30"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView42"
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView43"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="32"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H6 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView44"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView45"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="34"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView46"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="35"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView47"
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="36"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView48"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="37"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H7 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView49"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="38"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Pass"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView50"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="39"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Fail"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView51"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="40"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView52"
+                                android:layout_width="135dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="41"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Taux de defaux"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView53"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="42"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="H8 Cadence"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView54"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="43"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Taux de Defaux Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView55"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="44"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Cadence Total"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView56"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="45"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Cadence Théorique"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView57"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="46"
+                                android:layout_marginRight="1dp"
+                                android:layout_weight="1"
+                                android:background="#DFDFDF"
+                                android:gravity="left"
+                                android:padding="5dp"
+                                android:text="Actual H"
+                                android:textColor="#000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+
+                        </TableRow>
+
+
+                        <ListView
+                            android:id="@+id/myListProd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center" />
+
+
+                    </TableLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

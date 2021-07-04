@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F1F1F1"
+    tools:context=".BarCodeSearch">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="307dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:background="@xml/input"
+                android:inputType="textAutoComplete" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:background="@xml/button"
+                android:onClick="find"
+                android:src="@drawable/search" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:id="@+id/table"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:collapseColumns="10"
+                    android:visibility="visible">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="Serial Number"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="Work Order"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="Part Number"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="Station ID"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="Dating"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="Master Serial Number"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="SN Position"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="Status"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="Setup Name"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:background="#DFDFDF"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="UserName"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                    <ListView
+                        android:id="@+id/myList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:layout_anchor="@+id/myList" />
+
+
+                </TableLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#1976D2"
+        android:onClick="scan"
+        android:src="@drawable/barcode"
+        tools:targetApi="lollipop"
+        app:borderWidth="0dp"
+        app:elevation="2dp"
+        app:pressedTranslationZ="12dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

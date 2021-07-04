@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:collapseColumns="5">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/n_serie"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/station_id"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/d1"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="5"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="italic" />
+
+
+
+                </TableRow>
+
+            </TableLayout>
+
+</LinearLayout>

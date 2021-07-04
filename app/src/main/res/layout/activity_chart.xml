@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    tools:context=".ChartActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_gravity="center|top"
+        android:layout_marginTop="40dp"
+        android:textColorLink="#00000000"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:visibility="gone"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/piechart1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.ekn.gruzer.gaugelibrary.HalfGauge
+        android:id="@+id/piechart2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/piechart3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <ImageButton
+        android:id="@+id/fpy"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="25dp"
+        android:background="@xml/button"
+        android:onClick="click"
+        android:src="@drawable/arrow_forward"
+        tools:targetApi="lollipop" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
